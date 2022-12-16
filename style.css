@@ -1,0 +1,88 @@
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: black;
+}
+ul
+{
+    position: relative;
+    display: flex;
+}
+ul li
+{
+    position: relative;
+    list-style: none;
+    margin: 0 20px;
+    cursor: pointer;
+}
+ul li a
+{
+    text-decoration: none;
+}
+ul li a .fa
+{
+    font-size: 6em;
+    color: #222;
+}
+ul li::before
+{
+    font-family: fontAwesome;
+    position: absolute;
+    top: 0;
+    left: 0;
+    font-size: 6em;
+    height: 0;
+    overflow: hidden;
+    transition: 0.5s ease-in-out;
+}
+ul li:nth-child(1)::before
+{
+    content: '\f09a';
+    color: #1877f2;
+    /*O border-bottom: vai inserir uma mini borda acima dos icones;
+    border-bottom: 4px solid #3b5998*/
+;
+}
+ul li:nth-child(2)::before
+{
+    content: '\f232';
+    color: #25d366;
+    /*border-bottom: 4px solid #25d366;*/
+}
+ul li:nth-child(3)::before
+{
+    content: '\f16a';
+    color: #ff0000;
+    /*border-bottom: 4px solid #ff0000;*/
+}
+ul li:nth-child(4)::before
+{
+    content: '\f08c';
+    color: #0077b7;
+    /*border-bottom: 4px solid #0077b7*/
+;
+}
+ul li:nth-child(5)::before
+{
+    content: '\f16d';
+    background: rgb(131,58,180);
+    background: linear-gradient(229deg, rgba(131,58,180,1) 0%, rgba(232,56,56,0.8015581232492998) 61%, rgba(252,176,69,1) 100%);       -webkit-background-clip: text;
+    -moz-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color:transparent;
+    /*border-bottom: 4px solid #0077b7*/
+;
+}
+ul li:hover::before
+{
+    height: 100%;
+}
